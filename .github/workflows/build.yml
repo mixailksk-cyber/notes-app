@@ -6,12 +6,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-      - run: npm install -g eas-cli
-      - run: npm install
-      - run: eas build --platform android --profile preview --non-interactive --local
+          
+      - name: Setup Expo
+        run: npm install -g eas-cli
+        
+      - name: Install dependencies
+        run: npm install
+        
+      - name: Build APK
+        env:
+          EXPO_TOKEN: JZ3oqBy9z7mLGFY5aV980uNg6kfeLrxUPBHzefiv
+        run: eas build --platform android --profile preview --non-interactive --local
+        
       - uses: actions/upload-artifact@v4
         with:
           name: app-apk
