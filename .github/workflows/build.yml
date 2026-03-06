@@ -5,14 +5,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: 18
       - run: npm install -g eas-cli
       - run: npm install
-      - run: eas build --platform android --profile preview --non-interactive
-      - uses: actions/upload-artifact@v2
+      - run: eas build --platform android --profile preview --non-interactive --local
+      - uses: actions/upload-artifact@v4
         with:
           name: app-apk
           path: '*.apk'
