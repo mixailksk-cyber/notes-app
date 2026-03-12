@@ -1,21 +1,34 @@
 {
   "expo": {
-    "name": "Notes App",
-    "slug": "notes-app",
+    "name": "ColorNote",
+    "slug": "mkhailksk",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "newArchEnabled": true,
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#008080"
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true
     },
     "android": {
-      "package": "com.yourname.notesapp",
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#008080"
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true,
+      "package": "com.mkhailksk.snack5055ac3e1432423490bec9b4cbbab3f9"
+    },
+    "web": {
+      "favicon": "./assets/icon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "a56fd70e-2c79-49d2-866f-ce15ad3f6730"
       }
     }
   }
